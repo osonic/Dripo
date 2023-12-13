@@ -1,0 +1,200 @@
+Design Rule Check Report
+------------------------
+
+Report File    : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\Dripo_bak (PCB - Design Rule Check Report).txt
+Report Written : Tuesday, January 07, 2014
+Design Path    : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\Dripo_bak.pcb
+Design Title   : 
+Created        : 28/12/2013 09:59:21
+Last Saved     : 07/01/2014 00:22:34
+Editing Time   : 3786 min
+Units          : mm (precision 0)
+
+
+Results
+=======
+
+Pad to Pad Error (P-P) between (255 260) and (255 260) on Layer "[Top]".
+    Error between Component Pad J1.1 and Component Pad J1.2, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (256 260) and (256 260) on Layer "[Top]".
+    Error between Component Pad J1.1 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (255 260) and (255 259) on Layer "[Top]".
+    Error between Component Pad J1.2 and Component Pad J1.3, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (256 260) and (256 260) on Layer "[Top]".
+    Error between Component Pad J1.2 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (255 259) and (255 259) on Layer "[Top]".
+    Error between Component Pad J1.3 and Component Pad J1.4, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (256 259) and (256 259) on Layer "[Top]".
+    Error between Component Pad J1.3 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (255 259) and (255 258) on Layer "[Top]".
+    Error between Component Pad J1.4 and Component Pad J1.5, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (256 259) and (256 259) on Layer "[Top]".
+    Error between Component Pad J1.4 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (256 258) and (256 258) on Layer "[Top]".
+    Error between Component Pad J1.5 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (256 258) and (256 258) on Layer "[Top]".
+    Error between Component Pad J1.6 and Component Pad J1.7, Gap is 0 needs to be 0.
+Pad to Pad error (P-P) at (256 258) on layer "[Top]".
+    Error between Component Pad J1.6 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad error (P-P) at (257 258) on layer "[Top]".
+    Error between Component Pad J1.7 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 258) and (257 259) on Layer "[Top]".
+    Error between Component Pad J1.8 and Component Pad J1.9, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 258) and (257 258) on Layer "[Top]".
+    Error between Component Pad J1.8 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 259) and (257 259) on Layer "[Top]".
+    Error between Component Pad J1.9 and Component Pad J1.10, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 259) and (257 259) on Layer "[Top]".
+    Error between Component Pad J1.9 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 259) and (257 260) on Layer "[Top]".
+    Error between Component Pad J1.10 and Component Pad J1.11, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 259) and (257 259) on Layer "[Top]".
+    Error between Component Pad J1.10 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 260) and (257 260) on Layer "[Top]".
+    Error between Component Pad J1.11 and Component Pad J1.12, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 260) and (257 260) on Layer "[Top]".
+    Error between Component Pad J1.11 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (257 260) and (257 260) on Layer "[Top]".
+    Error between Component Pad J1.12 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (256 261) and (256 261) on Layer "[Top]".
+    Error between Component Pad J1.13 and Component Pad J1.14, Gap is 0 needs to be 0.
+Pad to Pad error (P-P) at (256 260) on layer "[Top]".
+    Error between Component Pad J1.13 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad error (P-P) at (256 260) on layer "[Top]".
+    Error between Component Pad J1.14 and Component Pad J1.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (366 296) and (366 296) on Layer "[Top]".
+    Error between Component Pad J2.1 and Component Pad J2.2, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (367 296) and (367 296) on Layer "[Top]".
+    Error between Component Pad J2.1 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (366 296) and (366 296) on Layer "[Top]".
+    Error between Component Pad J2.2 and Component Pad J2.3, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (367 296) and (367 296) on Layer "[Top]".
+    Error between Component Pad J2.2 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (366 295) and (366 295) on Layer "[Top]".
+    Error between Component Pad J2.3 and Component Pad J2.4, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (367 295) and (367 295) on Layer "[Top]".
+    Error between Component Pad J2.3 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (366 295) and (366 295) on Layer "[Top]".
+    Error between Component Pad J2.4 and Component Pad J2.5, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (367 295) and (367 295) on Layer "[Top]".
+    Error between Component Pad J2.4 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (367 294) and (367 294) on Layer "[Top]".
+    Error between Component Pad J2.5 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (368 295) and (368 295) on Layer "[Top]".
+    Error between Component Pad J2.6 and Component Pad J2.7, Gap is 0 needs to be 0.
+Pad to Pad error (P-P) at (368 295) on layer "[Top]".
+    Error between Component Pad J2.6 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad error (P-P) at (368 295) on layer "[Top]".
+    Error between Component Pad J2.7 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 295) and (369 295) on Layer "[Top]".
+    Error between Component Pad J2.8 and Component Pad J2.9, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 294) and (369 294) on Layer "[Top]".
+    Error between Component Pad J2.8 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 295) and (369 295) on Layer "[Top]".
+    Error between Component Pad J2.9 and Component Pad J2.10, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 295) and (369 295) on Layer "[Top]".
+    Error between Component Pad J2.9 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 296) and (369 296) on Layer "[Top]".
+    Error between Component Pad J2.10 and Component Pad J2.11, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 296) and (369 296) on Layer "[Top]".
+    Error between Component Pad J2.10 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 296) and (369 296) on Layer "[Top]".
+    Error between Component Pad J2.11 and Component Pad J2.12, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 296) and (369 296) on Layer "[Top]".
+    Error between Component Pad J2.11 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (369 297) and (369 297) on Layer "[Top]".
+    Error between Component Pad J2.12 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad Error (P-P) between (368 297) and (368 297) on Layer "[Top]".
+    Error between Component Pad J2.13 and Component Pad J2.14, Gap is 0 needs to be 0.
+Pad to Pad error (P-P) at (368 297) on layer "[Top]".
+    Error between Component Pad J2.13 and Component Pad J2.15, Gap is 0 needs to be 0.
+Pad to Pad error (P-P) at (368 297) on layer "[Top]".
+    Error between Component Pad J2.14 and Component Pad J2.15, Gap is 0 needs to be 0.
+Component to Board error (Cm-B) at (387 294) on layer "[Top]".
+    U1.
+Component to Board error (Cm-B) at (391 301) on layer "[Top]".
+    U2.
+Component to Board error (Cm-B) at (307 303) on layer "[Top]".
+    R2.
+Component to Board error (Cm-B) at (306 296) on layer "[Top]".
+    R3.
+Component to Board error (Cm-B) at (302 293) on layer "[Top]".
+    R4.
+Component to Board error (Cm-B) at (317 281) on layer "[Top]".
+    R5.
+Component to Board error (Cm-B) at (317 280) on layer "[Top]".
+    R6.
+Component to Board error (Cm-B) at (307 300) on layer "[Top]".
+    R7.
+Component to Board error (Cm-B) at (357 298) on layer "[Top]".
+    TX1.
+Component to Board error (Cm-B) at (368 296) on layer "[Top]".
+    J2.
+Component to Board error (Cm-B) at (347 277) on layer "[Top]".
+    R12.
+Component to Board error (Cm-B) at (355 277) on layer "[Top]".
+    R13.
+Component to Board error (Cm-B) at (347 276) on layer "[Top]".
+    R14.
+Component to Board error (Cm-B) at (347 275) on layer "[Top]".
+    R15.
+Component to Board error (Cm-B) at (372 301) on layer "[Top]".
+    U3.
+Component to Board error (Cm-B) at (317 279) on layer "[Top]".
+    R8.
+Gap in Net "N0009" between (232,258) and (237,257) 
+    N0009.
+Gap in Net "N0010" between (232,265) and (236,264) 
+    N0010.
+Gap in Net "N0011" between (237,258) and (236,265) 
+    N0011.
+Gap in Net "N0012" between (232,257) and (232,264) 
+    N0012.
+
+Number of errors found : 68
+
+
+Settings
+========
+
+
+Spacings
+
+=========
+
+Tracks         Yes
+Pads and Vias  Yes
+Shapes         Yes
+Text           Yes
+Board          Yes
+Drills         Yes
+Components     Yes
+
+
+Manufacturing
+
+==============
+
+Drill Breakout                   No
+Drill Backoff                    No
+Silkscreen Overlap               No
+Copper Text In Board             No
+Min Track Width                  No
+Min Annular Ring                 No
+Min Paste Size                   No
+Vias In Pads                     No
+Unplated Vias                    No
+Unplated Pads With Inner Tracks  No
+
+
+Nets
+
+=====
+
+Net Completion                Yes
+Dangling Tracks               Yes
+Net Track Length Differences  No
+
+
+
+End Of Report.

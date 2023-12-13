@@ -1,0 +1,20 @@
+-muwx
+-i C:\Users\Sonic\Dropbox\Code\DripoCore\DripoCore.hex
+-M
+-Y
+-y
+-b HOME = 0x0000
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-k C:\Program Files\SDCC\bin\..\lib\small
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+C:\Users\Sonic\Dropbox\Code\DripoCore\main.rel
+C:\Users\Sonic\Dropbox\Code\DripoCore\init.rel
+C:\Users\Sonic\Dropbox\Code\DripoCore\SMBus.rel
+C:\Users\Sonic\Dropbox\Code\DripoCore\AD593X.rel
+
+-e

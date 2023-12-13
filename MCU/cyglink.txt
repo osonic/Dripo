@@ -1,0 +1,2 @@
+"C:\Users\Sonic\Dropbox\Code\DripoCore\main.obj",
+"C:\Users\Sonic\Dropbox\Code\DripoCore\init.obj"  TO "C:\Users\Sonic\Dropbox\Code\DripoCore\DripoCore.omf" RS(256) PL(68) PW(78) 

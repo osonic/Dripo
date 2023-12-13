@@ -1,0 +1,290 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              01/12/2014 23:01:49 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\c51.exe main.c DB OE BR INCDIR(C:\SiLabs\MCU\Inc)
+
+line level    source
+
+   1          #include "init.h"
+   2          #include <stdio.h>
+   3          #include "compiler_defs.h"
+   4          #include "C8051F300_defs.h"
+   5          #include "AD593X.h"
+   6          #include <math.h>
+   7          // This can be interuptted!
+   8          
+   9          char putchar (char c)  
+  10          {
+  11   1          if (c == '\n')      // check for newline character
+  12   1          {                
+  13   2              while (!TI0);   // wait until UART0 is ready to transmit
+  14   2                  TI0 = 0;    // clear interrupt flag
+  15   2              SBUF0 = 0x0d;   // output carriage return command
+  16   2          }
+  17   1          while (!TI0);       // wait until UART0 is ready to transmit
+  18   1          TI0 = 0;            // clear interrupt flag
+  19   1          //SBUF0 = c;
+  20   1          return (SBUF0 = c); // output <c> using UART 0
+  21   1      }
+  22          
+  23          unsigned char put_unsigned_char (unsigned char c)  
+  24          {
+  25   1          while (!TI0);       // wait until UART0 is ready to transmit
+  26   1          EA = 0;
+  27   1          EA = 0;
+  28   1          TI0 = 0;            // clear interrupt flag
+  29   1          SBUF0 = c;
+  30   1          EA = 1;
+  31   1          EA = 1;
+  32   1          return c; // output <c> using UART 0
+  33   1      }
+  34          
+  35          /*
+  36          // This can be interuptted!
+  37          char _getkey ()
+  38          {
+  39              char c;
+  40              while (!RI0);       // wait until UART0 receives a character
+  41                  c = SBUF0;      // save character to local variable
+  42              RI0 = 0;            // clear UART0 receive interrupt flag
+  43              //return '#';
+  44              return (c);         // return value received through UART0
+  45          }
+  46          */
+  47          bit main_delay_1s()
+  48          {
+  49   1          unsigned long i = 0;
+  50   1          for (i = 0; i < 34200; i++);
+  51   1          return 1;
+  52   1      }
+  53          
+  54          #define TYPE_SN 0x00
+  55          #define TYPE_CR 0x01
+C51 COMPILER V9.52.0.0   MAIN                                                              01/12/2014 23:01:49 PAGE 2   
+
+  56          #define FREQ_HIGH 0x0D // 10K
+  57          #define FREQ_LOW  0x2B // 3K
+  58          
+  59          double r = 0;
+  60          double c = 0;
+  61          long c_count = 0;
+  62          long r_count = 0;
+  63          long c_count_tmp = 0;
+  64          long r_count_tmp = 0;
+  65          sbit CH_SELECT = P0^3;
+  66          unsigned char DataBuffer[8];
+  67          xdata unsigned char SN[8];
+  68          bit data_found = 0;
+  69          
+  70          void prepare_C_R(double c, double r)
+  71          {
+  72   1          unsigned char * ptC = &c;
+  73   1          unsigned char * ptR = &r;
+  74   1          DataBuffer[0] = ptC[0];
+  75   1          DataBuffer[1] = ptC[1];
+  76   1          DataBuffer[2] = ptC[2];
+  77   1          DataBuffer[3] = ptC[3];
+  78   1          DataBuffer[4] = ptR[0];
+  79   1          DataBuffer[5] = ptR[1];
+  80   1          DataBuffer[6] = ptR[2];
+  81   1          DataBuffer[7] = ptR[3];
+  82   1      }
+  83          
+  84          void prepareSN()
+  85          {
+  86   1          DataBuffer[0] = SN[0];
+  87   1          DataBuffer[1] = SN[1];
+  88   1          DataBuffer[2] = SN[2];
+  89   1          DataBuffer[3] = SN[3];
+  90   1          DataBuffer[4] = SN[4];
+  91   1          DataBuffer[5] = SN[5];
+  92   1          DataBuffer[6] = SN[6];
+  93   1          DataBuffer[7] = SN[7];
+  94   1      }
+  95          
+  96          void send_data(unsigned char type, unsigned char iLength)
+  97          {
+  98   1          unsigned char i = 0;
+  99   1          put_unsigned_char(0xF0);
+ 100   1          put_unsigned_char(type);
+ 101   1          for (i = 0; i < iLength; i++)
+ 102   1          {
+ 103   2              put_unsigned_char(DataBuffer[i]);
+ 104   2          }
+ 105   1          put_unsigned_char(0xF1);
+ 106   1      }
+ 107                                                                                                                    
+             -                                                                                                                        
+             -                                                                                                                        
+             -                                                                           
+ 108          void main(void)
+ 109          {
+ 110   1          unsigned char i = 0;
+ 111   1          Init_Device();
+ 112   1          TI0 = 1;
+ 113   1      
+ 114   1          TH0 = 0x00;
+C51 COMPILER V9.52.0.0   MAIN                                                              01/12/2014 23:01:49 PAGE 3   
+
+ 115   1          TL0 = 0x00;
+ 116   1          CH_SELECT = 0;
+ 117   1      
+ 118   1          for(i = 0; i < 8; i++)
+ 119   1          {
+ 120   2              SN[i] = i;
+ 121   2          }
+ 122   1      
+ 123   1          //prepareSN();
+ 124   1          //send_data(TYPE_SN, 8);
+ 125   1          //printf("Start!\n"); 
+ 126   1      
+ 127   1          while(1)
+ 128   1          {
+ 129   2              if (data_found == 1)
+ 130   2              {
+ 131   3                  //printf("Sec\n");
+ 132   3                  ET0 = 0;
+ 133   3                  ET0 = 0;
+ 134   3                  PCA0CPM1 = 0x01;
+ 135   3                  PCA0CPM1 = 0x01;
+ 136   3                  TH0 = 0;
+ 137   3                  TL0 = 0;
+ 138   3      
+ 139   3      
+ 140   3                  c_count = 0;
+ 141   3                  r_count = 0;
+ 142   3      
+ 143   3                  TH0 = 0;
+ 144   3                  TL0 = 0;
+ 145   3                  PCA0CPM1 = 0x21;
+ 146   3                  PCA0CPM1 = 0x21; 
+ 147   3                  if (c > 1000000)
+ 148   3                  {
+ 149   4                      c = 1000000;
+ 150   4                  }
+ 151   3                  if (r < 0)
+ 152   3                  {
+ 153   4                      r = 0;
+ 154   4                  }
+ 155   3                  prepare_C_R(c, r);
+ 156   3                  //prepare_C_R(0.1, -0.1);
+ 157   3                  send_data(TYPE_CR, 8);
+ 158   3      
+ 159   3                  ET0 = 1;
+ 160   3                  ET0 = 1;
+ 161   3                  TH0 = 0x00;
+ 162   3                  TL0 = 0x00;
+ 163   3                  data_found = 0;
+ 164   3              }
+ 165   2          }
+ 166   1      }
+ 167          
+ 168          /*
+ 169          void CMP0_F_ISR (void) interrupt INTERRUPT_COMPARATOR0F
+ 170          {
+ 171              CP0FIF = 0;
+ 172              PCA0CPH0 = 0x80;
+ 173          }
+ 174          
+ 175          void CMP0_R_ISR (void) interrupt INTERRUPT_COMPARATOR0R
+ 176          {
+C51 COMPILER V9.52.0.0   MAIN                                                              01/12/2014 23:01:49 PAGE 4   
+
+ 177              CP0RIF = 0;  
+ 178              PCA0CPH0 = 0x26;
+ 179          }
+ 180          */
+ 181          
+ 182          void INT0_ISR(void) interrupt INTERRUPT_INT0
+ 183          {
+ 184   1          PCA0CPH0 = FREQ_LOW;
+ 185   1      }
+ 186          
+ 187          void INT1_ISR(void) interrupt INTERRUPT_INT1
+ 188          {
+ 189   1          PCA0CPH0 = FREQ_HIGH;
+ 190   1      }
+ 191          
+ 192          void TIMER0_ISR(void) interrupt INTERRUPT_TIMER0
+ 193          { 
+ 194   1          EA = 0;
+ 195   1          EA = 0;
+ 196   1          c_count_tmp = c_count;
+ 197   1          r_count_tmp = r_count;
+ 198   1          EA = 1;
+ 199   1          EA = 1; 
+ 200   1      
+ 201   1          if (CH_SELECT == 0)
+ 202   1          {
+ 203   2              c = ((1.44 * 1000 * 1000 * 1000 * 1000 ) / (100000 * 3 * (double)c_count_tmp)) / 1.03;
+ 204   2          }
+ 205   1      
+ 206   1          if (CH_SELECT == 1)
+ 207   1          {
+ 208   2              r = ((1.44 / (double)r_count_tmp) - 100000 * 0.01e-6) / (2 * 0.01e-6) / 1000 / 1.03; // 1.03 corre
+             -ct factor
+ 209   2          }
+ 210   1          
+ 211   1          if (c > 200  &&  r < 30000)
+ 212   1          {
+ 213   2              data_found = 1;
+ 214   2          }
+ 215   1          else
+ 216   1          {
+ 217   2              data_found = 0;
+ 218   2          }
+ 219   1      
+ 220   1      
+ 221   1          CH_SELECT = ~CH_SELECT; 
+ 222   1      
+ 223   1          EA = 0;
+ 224   1          EA = 0; 
+ 225   1      
+ 226   1          if (CH_SELECT == 0)
+ 227   1          {
+ 228   2              c_count = 0; 
+ 229   2          }
+ 230   1          if (CH_SELECT == 1)
+ 231   1          {
+ 232   2              r_count = 0; 
+ 233   2          }
+ 234   1      
+ 235   1          TH0 = 0x00;
+ 236   1          TL0 = 0x00;  
+ 237   1      
+C51 COMPILER V9.52.0.0   MAIN                                                              01/12/2014 23:01:49 PAGE 5   
+
+ 238   1          EA = 1;
+ 239   1          EA = 1; 
+ 240   1      }
+ 241          
+ 242          void PCA_ISR(void) interrupt INTERRUPT_PCA0
+ 243          {
+ 244   1      
+ 245   1          if (CH_SELECT == 0)
+ 246   1          {
+ 247   2              c_count++;
+ 248   2          }
+ 249   1      
+ 250   1          if (CH_SELECT == 1)
+ 251   1          {
+ 252   2              r_count++;
+ 253   2          }
+ 254   1          CCF1 = 0;
+ 255   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    868    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =      8    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     32      18
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

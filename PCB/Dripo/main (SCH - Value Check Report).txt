@@ -1,0 +1,15 @@
+Value Check Report
+------------------
+
+Report File    : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\main (SCH - Value Check Report).txt
+Report Written : Thursday, December 26, 2013
+Project Path   : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\Dripo.prj
+Design Path    : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\main.sch
+Design Title   : 
+Created        : 
+Last Saved     : 26/12/2013 01:11:24
+Editing Time   : 14 min
+Units          : thou (precision 2)
+
+
+End Of Report.

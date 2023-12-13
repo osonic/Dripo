@@ -1,0 +1,24 @@
+
+BL51 BANKED LINKER/LOCATER V6.22 - SN: Eval Version
+COPYRIGHT KEIL ELEKTRONIK GmbH 1987 - 2009
+"C:\Users\Sonic\Dropbox\Code\DripoCore\main.obj",
+"C:\Users\Sonic\Dropbox\Code\DripoCore\init.obj"  TO "C:\Users\Sonic\Dropbox\Code\DripoCore\DripoCore.omf" RS(256) PL(68) PW(78) 
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PUTCHAR?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MAIN_DELAY_1S?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PREPARESN?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 03EDH BYTE (49%) *
+******************************************************************************
+
+>> 
+>> 
+>> 
+Program Size: data=59.1 xdata=8 code=2177
+LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)

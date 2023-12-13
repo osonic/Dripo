@@ -1,0 +1,40 @@
+#include "AD593X.h"
+#include "SMBus.h"
+
+#define MAX_AD593X_BUFFER_SIZE  4
+#define SENSOR_ADDR             0x0D
+
+unsigned char _ad593x_data_out[MAX_AD593X_BUFFER_SIZE];
+
+void delay()
+{
+    unsigned int i = 0;
+    unsigned int n = 0;
+    for (i = 0; i < 1; i++)
+    {
+
+    }
+}
+
+bit write_ad593x_register(unsigned char reg_addr, unsigned char data_out)
+{
+    _ad593x_data_out[0] = reg_addr;
+    _ad593x_data_out[1] = data_out;
+    write_smb_data(SENSOR_ADDR, _ad593x_data_out, 2);
+    delay();
+    return 1;
+}
+
+unsigned char read_ad593x_register(unsigned char command, unsigned char reg_addr)
+{
+    unsigned char c;
+    // Write the reg addr at first
+    _ad593x_data_out[0] = command;
+    _ad593x_data_out[1] = reg_addr;
+    write_smb_data(SENSOR_ADDR, _ad593x_data_out, 2);
+    delay();
+    c = read_smb_byte(SENSOR_ADDR);
+    delay();
+    // Read from the device 
+    return c;
+}

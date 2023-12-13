@@ -1,0 +1,63 @@
+C51 COMPILER V9.52.0.0   AD593X                                                            12/14/2013 12:17:47 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE AD593X
+OBJECT MODULE PLACED IN AD593X.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\c51.exe AD593X.c DB OE BR INCDIR(C:\SiLabs\MCU\Inc)
+
+line level    source
+
+   1          #include "AD593X.h"
+   2          #include "SMBus.h"
+   3          
+   4          #define MAX_AD593X_BUFFER_SIZE  4
+   5          #define SENSOR_ADDR             0x0D
+   6          
+   7          unsigned char _ad593x_data_out[MAX_AD593X_BUFFER_SIZE];
+   8          
+   9          void delay()
+  10          {
+  11   1          unsigned int i = 0;
+  12   1          unsigned int n = 0;
+  13   1          for (i = 0; i < 200; i++)
+  14   1          {
+  15   2      
+  16   2          }
+  17   1      }
+  18          
+  19          bit write_ad593x_register(unsigned char reg_addr, unsigned char data_out)
+  20          {
+  21   1          _ad593x_data_out[0] = reg_addr;
+  22   1          _ad593x_data_out[1] = data_out;
+  23   1          write_smb_data(SENSOR_ADDR, _ad593x_data_out, 2);
+  24   1          delay();
+  25   1          return 1;
+  26   1      }
+  27          
+  28          unsigned char read_ad593x_register(unsigned char command, unsigned char reg_addr)
+  29          {
+  30   1          unsigned char c;
+  31   1          // Write the reg addr at first
+  32   1          _ad593x_data_out[0] = command;
+  33   1          _ad593x_data_out[1] = reg_addr;
+  34   1          write_smb_data(SENSOR_ADDR, _ad593x_data_out, 2);
+  35   1          delay();
+  36   1          c = read_smb_byte(SENSOR_ADDR);
+  37   1          delay();
+  38   1          // Read from the device 
+  39   1          return c;
+  40   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     82    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

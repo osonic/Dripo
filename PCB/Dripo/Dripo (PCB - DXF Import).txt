@@ -1,0 +1,15 @@
+DXF Import
+----------
+
+Report File    : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\Dripo (PCB - DXF Import).txt
+Report Written : Tuesday, January 07, 2014
+Design Path    : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\Dripo.pcb
+Design Title   : 
+Created        : 07/01/2014 00:51:06
+Last Saved     : 07/01/2014 00:59:28
+Editing Time   : 8 min
+Units          : mil (precision 1)
+
+Cannot import 'splines' - imported data may be incomplete.
+
+End Of Report.

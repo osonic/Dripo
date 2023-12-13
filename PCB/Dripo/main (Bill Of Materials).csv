@@ -1,0 +1,36 @@
+Report Written :   Sunday, January 05, 2014  02:55
+Design Path    :   C:\Users\Sonic\Dropbox\Code\PCB\Dripo\Dripo.pcb
+Design Title   :
+Created        :   28/12/2013 09:59:21
+Last Saved     :   05/01/2014 02:16:52
+Editing Time   :   1221 min
+Units          :   mm (precision 0)
+
+Bill of Materials generated with DesignSpark PCB - www.DesignSpark.com/pcb
+--------------------------------------------------------------------------
+
+
+"Ref Name","Qty","Component","Value","Package","Manufacturer","MPN","RS Part Number","Description"
+"J1","1","C8051F300","C8051F300","MLP11","","","",""
+"J2","1","C8051F300","C8051F300","MLP11","","","",""
+"C1","1","Capacitor","","0402","","","","Capacitor"
+"U2","1","CD74HC4053PWRG4","","PW16","","CD74HC4053PWRG4","","IC MUX/DEMUX TRIPLE 2X1 16TSSOP"
+"D1","1","Diode","","D_0402","","","","Diode"
+"D2","1","Diode","","D_0402","","","","Diode"
+"D3","1","Diode","","D_0402","","","","Diode"
+"D4","1","Diode","","D_0402","","","","Diode"
+"U3","1","MB2S-E3","","TO-269AA_MB-L","Vishay","MB2S-E3","6290300","MB2S-E3"
+"R1","1","Resistor","","0402","","","","Resistor"
+"R2","1","Resistor","","0402","","","","Resistor"
+"R3","1","Resistor","","0402","","","","Resistor"
+"R4","1","Resistor","","0402","","","","Resistor"
+"R5","1","Resistor","","0402","","","","Resistor"
+"R6","1","Resistor","","0402","","","","Resistor"
+"R7","1","Resistor","","0402","","","","Resistor"
+"R12","1","Resistor","","0402","","","","Resistor"
+"R13","1","Resistor","","0402","","","","Resistor"
+"R14","1","Resistor","","0402","","","","Resistor"
+"R15","1","Resistor","","0402","","","","Resistor"
+"R8","1","Resistor","","0402","","","","Resistor"
+"TX1","1","Transformer","","LPR6235","","","",""
+"U1","1","TS3V556ID","","SO-G14G3","","TS3V556ID","",""

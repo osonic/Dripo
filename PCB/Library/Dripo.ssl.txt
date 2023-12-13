@@ -1,0 +1,22 @@
+Library Report
+--------------
+
+Report File    : C:\Users\Sonic\Dropbox\Code\PCB\Library\Dripo.ssl.txt
+Report Written : Sunday, January 05, 2014
+
+
+Schematic library symbols (*.ssl)
+
+
+===================================
+
+
+Library : Dripo    {C:\Users\Sonic\Dropbox\Code\PCB\Library}
+
+
+==============================================================
+
+C  C8051F300  CD74HC4053PWRG4  CON4_1X4_B  D
+R  TO-269AA   Transformer      TS3V556ID
+
+End Of Report.

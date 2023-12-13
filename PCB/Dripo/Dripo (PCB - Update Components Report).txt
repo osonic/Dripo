@@ -1,0 +1,157 @@
+Update Components Report
+------------------------
+
+Report File    : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\Dripo (PCB - Update Components Report).txt
+Report Written : Wednesday, January 08, 2014
+Design Path    : C:\Users\Sonic\Dropbox\Code\PCB\Dripo\Dripo.pcb
+Design Title   : 
+Created        : 07/01/2014 18:44:23
+Last Saved     : 08/01/2014 02:57:20
+Editing Time   : 492 min
+Units          : mm (precision 1)
+
+
+Library Files:
+==============
+
+C:\Users\Sonic\Dropbox\Code\PCB\Library\Dripo.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\User\User.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\Default\DesignSpark.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\Default\ltspice.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\Default\XSpice.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\Picaxe\PICAXE_Create_Components.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\Picaxe\PICAXE_Create_PICAXE.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\3m.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\74hc.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\74hct.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\74ls.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\4000.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\actel.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\ad.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\adsp.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\altera.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\alteracyclone.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\amp.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\atmel.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\atmel8051.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\atmelarm.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\atmelatsam7.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\atmelavr.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\avx.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\capacitor.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\coldfire.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\connector.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\csm.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\cypress.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\diode.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\discrete.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\dsm.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\fairchild.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\fairchild1.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\fairchildacex.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\fci.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\fuse.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\hamlin.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\hybrid.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\infineontc116x.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\intel8051.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\ir.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\lattice.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\lt.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\ltspice.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\luminarycortex.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\maxim.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\maxim8051.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\maximmp.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\mc68hc.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\microchip.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\microchippic.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\molex.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\msp430.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\murata.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\natsemi.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\nxp-lpc32x0.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\omron.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\onsemi.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\opamps.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\pcb.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\philips80c51.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\philipsarm.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\philipsp89.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\philipsxa.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\picaxe.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\powerpc.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\qbsm.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\qcsm.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\qsm.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\quicklogic.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\relay.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\renesasr8c.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\resistor.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\rfmicro.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\schema.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\sm.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\sonycx.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\st-arm7.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\st.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\testpoint.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\ti.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\tms320.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\tms470.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\toshibatmp86.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\trans.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\transistor.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\vishay.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\xilinx.cml
+C:\Users\Public\Documents\DesignSpark PCB 5.1\Library\zilog.cml
+
+Selected items to be updated:
+=============================
+
+
+Components:
+===========
+
+TS3V556ID  C:\Users\Sonic\Dropbox\Code\PCB\Library\Dripo.cml
+
+Symbols:
+========
+
+SO-G14G3  C:\Users\Sonic\Dropbox\Code\PCB\Library\Dripo.psl
+
+Additional items to be updated:
+===============================
+
+
+Components:
+===========
+
+    (None) 
+
+Symbols:
+========
+
+    (None) 
+
+
+
+Update Components Summary
+=========================
+
+Updating selected components.
+(Force update of items, even if latest version)
+Update component values
+Update component value positions
+(Remove pad style exceptions on updated components)
+
+	Selected for update:			   1  Component 
+						   1  Symbol 
+
+	Selected items to be updated:		   1  Component 
+						   1  Symbol 
+
+	Additional items to be updated:		   0  Components
+						   0  Symbols
+
+
+End Of Report.

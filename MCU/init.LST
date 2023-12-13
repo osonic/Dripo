@@ -1,0 +1,99 @@
+C51 COMPILER V9.52.0.0   INIT                                                              01/12/2014 23:01:49 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE INIT
+OBJECT MODULE PLACED IN init.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\c51.exe init.c DB OE BR INCDIR(C:\SiLabs\MCU\Inc)
+
+line level    source
+
+   1          /////////////////////////////////////
+   2          //  Generated Initialization File  //
+   3          /////////////////////////////////////
+   4          
+   5          #include "compiler_defs.h"
+   6          #include "C8051F300_defs.h"
+   7          
+   8          // Peripheral specific initialization functions,
+   9          // Called from the Init_Device() function
+  10          void PCA_Init()
+  11          {
+  12   1          PCA0CN    = 0x40;
+  13   1          PCA0MD    &= ~0x40;
+  14   1          PCA0MD    = 0x00;
+  15   1          PCA0CPM0  = 0x46;
+  16   1          PCA0CPM1  = 0x21;
+  17   1          PCA0CPH0  = 0x80;
+  18   1      }
+  19          
+  20          void Timer_Init()
+  21          {
+  22   1          TCON      = 0x55;
+  23   1          TMOD      = 0x21;
+  24   1          CKCON     = 0x02;
+  25   1          TH1       = 0x96;
+  26   1      }
+  27          
+  28          void Comparator_Init()
+  29          {
+  30   1          CPT0CN    = 0x05;
+  31   1          CPT0MX    = 0x11;
+  32   1      }
+  33          
+  34          void Voltage_Reference_Init()
+  35          {
+  36   1          REF0CN    = 0x04;
+  37   1      }
+  38          
+  39          void Port_IO_Init()
+  40          {
+  41   1          // P0.0  -  CEX0 (PCA),  Push-Pull,  Digital
+  42   1          // P0.1  -  CEX1 (PCA),  Open-Drain, Digital
+  43   1          // P0.2  -  Unassigned,  Open-Drain, Digital
+  44   1          // P0.3  -  Skipped,     Push-Pull,  Digital
+  45   1          // P0.4  -  TX0 (UART0), Push-Pull,  Digital
+  46   1          // P0.5  -  Unassigned,  Open-Drain, Digital
+  47   1          // P0.6  -  Unassigned,  Open-Drain, Digital
+  48   1          // P0.7  -  Unassigned,  Open-Drain, Digital
+  49   1      
+  50   1          P0MDOUT   = 0x19;
+  51   1          XBR0      = 0x08;
+  52   1          XBR1      = 0x81;
+  53   1          XBR2      = 0xC0;
+  54   1      }
+  55          
+C51 COMPILER V9.52.0.0   INIT                                                              01/12/2014 23:01:49 PAGE 2   
+
+  56          void Interrupts_Init()
+  57          {
+  58   1          IP        = 0x05;
+  59   1          EIE1      = 0x08;
+  60   1          IT01CF    = 0xC4;
+  61   1          IE        = 0x87;
+  62   1      }
+  63          
+  64          // Initialization function for device,
+  65          // Call Init_Device() from your main program
+  66          void Init_Device(void)
+  67          {
+  68   1          PCA_Init();
+  69   1          Timer_Init();
+  70   1          Comparator_Init();
+  71   1          Voltage_Reference_Init();
+  72   1          Port_IO_Init();
+  73   1          Interrupts_Init();
+  74   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     87    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

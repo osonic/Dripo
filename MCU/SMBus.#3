@@ -1,0 +1,150 @@
+#include "compiler_defs.h"
+#include "C8051F300_defs.h"
+#include "SMBus.h"
+#include <stdio.h>
+
+#define MAX_SMB_BUFFER_SIZE 4
+      
+unsigned char _target_addr = 0;
+unsigned char _data_out_size = 0;
+unsigned char _data_out_ptr = 0;
+
+unsigned char _smb_data_out[MAX_SMB_BUFFER_SIZE];
+unsigned char _smb_data_in;
+
+bit _smb_busy = 0;
+
+bit _smb_rw = WRITE;
+
+
+
+bit smb_is_busy()
+{
+    if ((SMB0CF & 0x20) == 0x20)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+// !!!Multi bytes!!!
+bit write_smb_data(unsigned char target_addr, unsigned char * data_out, unsigned data_out_size)
+{
+    unsigned char i = 0;
+    //SMB0DAT = 0;
+    if (data_out_size > MAX_SMB_BUFFER_SIZE)
+    {
+        return 0;
+    }
+    for (i = 0; i < data_out_size; i++)
+    {
+        _smb_data_out[i] = data_out[i];
+    }
+    _data_out_ptr = 0;
+    _data_out_size = data_out_size;
+    
+    _smb_rw = WRITE;
+    _target_addr = target_addr << 1;
+    _target_addr &= 0xFE; 
+    _target_addr |= _smb_rw; 
+    
+    _smb_busy = 1;
+
+    while (_smb_busy);
+    STA = 1;
+    while (_smb_busy);
+    return 1;
+}
+
+// !!!Single byte!!!
+unsigned char read_smb_byte(unsigned char target_addr)
+{
+    //SMB0DAT = 0;
+    _smb_rw = READ;
+    _target_addr = target_addr << 1;
+    _target_addr &= 0xFE; 
+    _target_addr |= _smb_rw; 
+
+    while (_smb_busy);
+    STA = 1;
+    while (_smb_busy);
+    return _smb_data_in;
+}
+
+unsigned char c = 0;
+void SMBus_ISR(void) interrupt INTERRUPT_SMBUS0
+{
+    if (ARBLOST == 1) // ARB error occurred       
+    {
+        SMB0CF &= ~0x80;                 // Reset communication
+        SMB0CF |= 0x80;
+        STA = 0;
+        STO = 0;
+        ACK = 0;
+        _smb_busy = 0;
+        return;             // quit on error
+    }
+    
+    switch (SMB0CN & 0xF0)           // Status vector
+    {
+        // Master Transmitter(including transmitting addr when read): START condition transmitted.
+        case SMB_MTSTA:  //1110:0000
+        {
+            SMB0DAT = _target_addr;
+            STA = 0;                   // Manually clear START bit
+            break;
+        }
+        // Master Transmitter: Data byte transmitted
+        case SMB_MTDB:  //1100:0000
+        {
+            if (ACK)                   // Slave ACK?
+            {
+                if (_smb_rw == WRITE)
+                {
+                    if (_data_out_ptr < _data_out_size) // If this transfer is a WRITE,
+                    {
+                        // send data byte
+                        SMB0DAT = _smb_data_out[_data_out_ptr];
+                        _data_out_ptr++;
+                    }
+                    else // If this transfer is a READ,
+                    {
+                        STO = 1; 
+                        _smb_busy = 0;
+                    } 
+                }  
+
+            }
+            else                       // If slave NACK,
+            {
+                STO = 1;                // Send STOP condition, followed
+                printf("NACK\n");
+                _smb_busy = 0;
+            }
+            break;
+        }
+        // Master Receiver: byte received
+        case SMB_MRDB:   //1000:0000
+        {
+            _smb_data_in = SMB0DAT;     // Store received byte
+
+            ACK = 0;                   // Send NACK to indicate last byte
+                                       // of this transfer
+
+            STO = 1;                   // Send STOP to terminate transfer
+            _smb_busy = 0;
+            break;
+        }
+        default:
+        {
+            //printf("Error!\n");
+            printf("Error\n");
+            _smb_busy = 0;
+            break;
+        }
+    } // end switch
+    SI = 0;                             // Clear interrupt flag
+}
